@@ -2,7 +2,8 @@ dev:
 	 pnpm dev
 
 build:
-	 pnpm build
+	pnpm i
+	pnpm build
 
 install:
 	pnpm astro add solid
