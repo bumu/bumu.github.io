@@ -1,6 +1,10 @@
 name: Deploy to GitHub Pages
 
-on: [push]
+on:
+  push:
+    branches:
+      - "*"
+      - "!gh-pages"
 
 jobs:
   deploy-gh-pages:
@@ -33,4 +37,4 @@ jobs:
           cname: bumu.github.io
           enable_jekyll: true
           publish_branch: gh-pages
-          publish_dir: ./dist
+          publish_dir: ./dist/
