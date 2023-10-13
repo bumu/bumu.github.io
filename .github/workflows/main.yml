@@ -41,4 +41,5 @@ jobs:
           full_commit_message: deploy ${{ github.event.head_commit.message }}
 
       - name: Debug
-        run: find . -name .nojekyll
+        run: pwd && ls -al && \
+          find . -name .nojekyll
