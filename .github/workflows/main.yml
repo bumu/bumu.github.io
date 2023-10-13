@@ -38,3 +38,7 @@ jobs:
           enable_jekyll: true
           publish_branch: gh-pages
           publish_dir: ./dist/
+          full_commit_message: deploy ${{ github.event.head_commit.message }}
+
+      - name: Debug
+        run: find . -name .nojekyll
