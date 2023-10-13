@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 20
 
@@ -41,5 +41,4 @@ jobs:
           full_commit_message: deploy ${{ github.event.head_commit.message }}
 
       - name: Debug
-        run: pwd && ls -al && \
-          find . -name .nojekyll
+        run: pwd && ls -al && find . -name .nojekyll
